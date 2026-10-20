@@ -1,0 +1,21 @@
+{
+  "name": "aulanexo",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Asistente académico con RAG y herramientas. Primer avance: prototipo local y especificaciones.",
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "spec:validate": "openspec validate --all --strict",
+    "spec:list": "openspec list"
+  },
+  "devDependencies": {
+    "@fission-ai/openspec": "1.14.3",
+    "vite": "8.3.4"
+  }
+}

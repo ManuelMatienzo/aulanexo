@@ -1,0 +1,14 @@
+schema: spec-driven
+context: |
+  Proyecto académico de Tópicos Avanzados de Programación.
+  Modalidad elegida: harness web especializado con RAG y herramientas.
+  Escribir artefactos en español, conservando encabezados y palabras normativas de OpenSpec.
+  El primer avance debe ser pequeño: documentación y prototipo local sin IA.
+  Los incrementos futuros cubrirán backend, modelo, RAG, herramientas y hosting.
+rules:
+  proposal:
+    - Explicar qué queda fuera de cada incremento.
+  specs:
+    - Incluir escenarios verificables y distinguir demostración de funcionalidad real.
+  tasks:
+    - Escribir las especificaciones antes del código y verificar antes de archivar.
