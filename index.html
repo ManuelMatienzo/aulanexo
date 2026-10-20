@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#173c37" />
+    <meta name="description" content="AulaNexo: prototipo de un asistente para consultar el material de Tópicos Avanzados de Programación." />
+    <title>AulaNexo · Tu materia, conectada</title>
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar" aria-label="Espacio de estudio">
+        <a class="brand" href="./" aria-label="AulaNexo, inicio">
+          <span class="brand-icon" aria-hidden="true">a<span>n</span></span>
+          <span>AulaNexo<small>Tu materia, conectada.</small></span>
+        </a>
+
+        <button class="new-chat" id="new-chat" type="button"><span aria-hidden="true">＋</span> Nueva conversación</button>
+
+        <section class="course">
+          <p class="eyebrow">ESPACIO DE ESTUDIO</p>
+          <div class="course-icon" aria-hidden="true">⌘</div>
+          <h2>Tópicos Avanzados <br />de Programación</h2>
+          <p>Un lugar para conectar conceptos,<br class="desktop-break" /> apuntes y preguntas.</p>
+        </section>
+
+        <section class="documents" aria-labelledby="documents-title">
+          <div class="section-heading"><h2 id="documents-title">Material de la materia</h2><span class="count">0</span></div>
+          <div class="document-placeholder" aria-hidden="true">▤</div>
+          <p>Tu conocimiento empieza aquí</p>
+          <small>La carga de archivos TXT y PDF estará disponible en una próxima etapa.</small>
+          <button type="button" disabled>＋ Añadir documentos</button>
+          <span class="pending">Procesamiento pendiente</span>
+        </section>
+
+        <footer class="sidebar-footer">
+          <span class="stage-dot" aria-hidden="true"></span>
+          <div>Primer avance<small>Proyecto académico · v0.1</small></div>
+        </footer>
+      </aside>
+
+      <main class="workspace">
+        <header class="topbar">
+          <div><span class="breadcrumb">AulaNexo</span><span class="slash">/</span><strong>Asistente académico</strong></div>
+          <span class="demo-badge"><span aria-hidden="true"></span>Modo demostración</span>
+        </header>
+
+        <div class="chat-area">
+          <section class="welcome" id="welcome" aria-labelledby="welcome-title">
+            <div class="welcome-symbol" aria-hidden="true">✳</div>
+            <p class="eyebrow">MENOS BUSCAR. MÁS COMPRENDER.</p>
+            <h1 id="welcome-title">Conecta las ideas.<br /><em>Entiende tu materia.</em></h1>
+            <p class="intro">Un espacio para hacer preguntas y explorar tus apuntes.<br class="desktop-break" /> Empecemos con una idea.</p>
+
+            <div class="suggestions" aria-label="Preguntas sugeridas">
+              <button type="button" data-question="¿Qué es un harness de IA?">
+                <span class="suggestion-label">01 · EXPLORAR</span>
+                <span>¿Qué es un <br />harness de IA?</span><span class="card-arrow" aria-hidden="true">↗</span>
+              </button>
+              <button type="button" data-question="¿Qué podré hacer con AulaNexo?">
+                <span class="suggestion-label">02 · DESCUBRIR</span>
+                <span>¿Qué podré hacer <br />con AulaNexo?</span><span class="card-arrow" aria-hidden="true">↗</span>
+              </button>
+              <button type="button" data-question="¿Cómo se usarán las fuentes?">
+                <span class="suggestion-label">03 · COMPRENDER</span>
+                <span>¿Cómo se usarán <br />las fuentes?</span><span class="card-arrow" aria-hidden="true">↗</span>
+              </button>
+            </div>
+          </section>
+
+          <section class="messages" id="messages" role="log" aria-label="Conversación" aria-live="polite" aria-relevant="additions" hidden></section>
+
+          <div class="composer-area">
+            <div class="demo-notice"><span aria-hidden="true">ⓘ</span><p>Estás explorando el prototipo. Las respuestas son ejemplos fijos; todavía no hay IA ni consulta de documentos.</p></div>
+            <form id="chat-form" class="composer">
+              <label class="sr-only" for="question">Escribe tu consulta sobre la materia</label>
+              <textarea id="question" name="question" rows="2" maxlength="1000" placeholder="¿Qué te gustaría entender hoy?" aria-describedby="input-hint input-error"></textarea>
+              <div class="composer-bottom">
+                <span id="input-hint">Enter para enviar · Mayús + Enter para otra línea</span>
+                <button id="send" type="submit" aria-label="Enviar consulta" disabled>↑</button>
+              </div>
+            </form>
+            <p class="input-error" id="input-error" role="alert"></p>
+            <p class="privacy-note">Conversación temporal · Se borra al recargar la página</p>
+          </div>
+        </div>
+        <footer class="workspace-footer"><span>APRENDER ES CONECTAR.</span><span>AulaNexo / 2026</span></footer>
+      </main>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

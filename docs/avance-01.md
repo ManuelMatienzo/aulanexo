@@ -44,3 +44,15 @@ Por ahora quedan fuera: múltiples materias, usuarios y permisos, OCR de documen
 ## Criterios de aceptación del avance
 
 La aplicación debe identificar su estado de demostración, aceptar consultas no vacías sin ejecutar su contenido como HTML, mostrar respuestas fijas sin atribuirlas a un LLM y permitir limpiar la conversación. La compilación y la validación estricta de OpenSpec deben finalizar correctamente.
+
+## Verificación realizada
+
+- Compilación de producción y validación estricta de OpenSpec correctas.
+- Comprobadas las tres sugerencias y una consulta propia.
+- Comprobados el rechazo de espacios y de 1001 caracteres y el reinicio de la conversación.
+- El texto `<b>Consulta propia</b>` se muestra literalmente, sin crear elementos HTML.
+- Comprobados el salto de línea con Mayús + Enter y el foco visible con teclado.
+- Vista móvil de 360 × 800 sin desplazamiento horizontal de la página.
+- Sin advertencias ni errores capturados en la consola del navegador durante la revisión.
+
+![Pantalla inicial del prototipo](images/avance-01.png)
