@@ -44,8 +44,8 @@ function submitQuestion(value) {
     'Tu consulta se recibió en esta demostración local. En una próxima etapa, AulaNexo buscará información en los documentos de la materia para responder con fuentes. Este prototipo todavía no analiza tu pregunta con IA ni consulta archivos.', 'assistant');
   input.value = '';
   updateInput();
-  input.focus();
-  messages.lastElementChild.scrollIntoView({ block: 'nearest', behavior: 'instant' });
+  input.focus({ preventScroll: true });
+  messages.scrollTop = messages.scrollHeight;
 }
 
 form.addEventListener('submit', (event) => {
@@ -71,5 +71,6 @@ document.querySelector('#new-chat').addEventListener('click', () => {
   welcome.hidden = false;
   input.value = '';
   updateInput();
-  input.focus();
+  welcome.scrollTop = 0;
+  input.focus({ preventScroll: true });
 });
